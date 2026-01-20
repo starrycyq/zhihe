@@ -2,11 +2,17 @@ import pytest
 from test_demo import add, subtract
 
 def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-    assert add(0, 0) == 0
+    assert add(2, 3) == 5, "2+3 should be 5"
+    assert add(-1, 1) == 0, "-1+1 should be 0"
+    assert add(0, 0) == 0, "0+0 should be 0"
 
 def test_subtract():
-    assert subtract(5, 3) == 2
-    assert subtract(3, 5) == -2
-    assert subtract(0, 0) == 0
+    assert subtract(5, 3) == 2, "5-3 should be 2"
+    assert subtract(3, 5) == -2, "3-5 should be -2"
+    assert subtract(0, 0) == 0, "0-0 should be 0"
+
+def test_add_simple():
+    print("Testing simple add...")
+    result = add(1, 1)
+    assert result == 2, f"1+1 should be 2, got {result}"
+    print(f"Result: {result}")
